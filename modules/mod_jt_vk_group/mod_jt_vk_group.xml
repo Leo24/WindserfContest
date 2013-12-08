@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>VK Group</name>
+	<author>Makeev Vladimir</author>
+	<creationDate>20/01/2012</creationDate>
+	<copyright>Copyright (C) 2011-2013 Jtemplate.ru. All Rights Reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>jtemplateru@yandex.ru</authorEmail>
+	<authorUrl>http://jtemplate.ru/en</authorUrl>
+	<version>2.0</version>
+	<description>VK Group module - widget displays the group vk.com</description>
+	
+	<files>	
+		<filename  module="mod_jt_vk_group">mod_jt_vk_group.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_jt_vk_group.xml</filename>
+		<folder>tmpl</folder>	
+		<folder>admin</folder>		
+	</files>
+	
+	<languages>
+		<language tag="en-GB">en-GB.mod_jt_vk_group.ini</language>
+		<language tag="en-GB">en-GB.mod_jt_vk_group.sys.ini</language>
+		<language tag="ru-RU">ru-RU.mod_jt_vk_group.ini</language>
+		<language tag="ru-RU">ru-RU.mod_jt_vk_group.sys.ini</language>
+	</languages>	
+	
+			<config>
+				<fields name="params">
+					<fieldset name="basic" addfieldpath="/modules/mod_jt_vk_group/admin/elements">					
+						 <field type="asset" path="modules/mod_jt_vk_group/admin/" />
+					
+						 <field name="script_vk" type="radio" default="0" class="btn-group" label="MOD_JT_VK_GROUP_FIELD_SCRIPT_VK_LABEL" description="MOD_JT_VK_GROUP_FIELD_SCRIPT_VK_DESC">
+							 <option value="0">JYES</option>
+							 <option value="1">JNO</option>
+						 </field>
+						 <field name="group_id" type="text" label="MOD_JT_VK_GROUP_FIELD_ID_GROUP_LABEL" default="24488116" description="MOD_JT_VK_GROUP_FIELD_ID_GROUP_DESC"/>
+						 <field name="width" type="text" label="MOD_JT_VK_GROUP_FIELD_WIDTH_LABEL" default="300" description="MOD_JT_VK_GROUP_FIELD_WIDTH_DESC"/>
+						 <field name="height" type="text" label="MOD_JT_VK_GROUP_FIELD_HEIGHT_LABEL" default="300" description="MOD_JT_VK_GROUP_FIELD_HEIGHT_DESC"/>
+						 <field name="mode" type="list" label="MOD_JT_VK_GROUP_FIELD_MODE_LABEL" default="0" description="MOD_JT_VK_GROUP_FIELD_MODE_DESC">
+							 <option value="0">MOD_JT_VK_GROUP_MEMBERS_OPTION</option>
+							 <option value="1">MOD_JT_VK_GROUP_ONLY_NAME_OPTION</option>
+							 <option value="2">MOD_JT_VK_GROUP_NEWS_OPTION</option>
+						 </field>				
+					</fieldset>
+					
+					<fieldset
+						name="advanced" 
+						addfieldpath="/modules/mod_jt_vk_group/admin/elements">
+				
+						<field
+							name="layout"
+							type="modulelayout"
+							label="JFIELD_ALT_LAYOUT_LABEL"
+							description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+							
+						<field
+							name="moduleclass_sfx"
+							type="text"
+							label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+							description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+		
+						<field
+							name="cache"
+							type="list"
+							default="1"
+							label="COM_MODULES_FIELD_CACHING_LABEL"
+							description="COM_MODULES_FIELD_CACHING_DESC">
+							<option
+								value="1">JGLOBAL_USE_GLOBAL</option>
+							<option
+								value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+						</field>
+		
+						<field
+							name="cache_time"
+							type="text"
+							default="900"
+							label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+							description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+						<field
+							name="cachemode"
+							type="hidden"
+							default="static">
+							<option
+								value="static"></option>
+						</field>
+					</fieldset>				
+				</fields>
+			</config>
+			
+</extension>
