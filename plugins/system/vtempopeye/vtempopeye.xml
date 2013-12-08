@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system" method="upgrade">
+	<name>System - VTEM Popeye</name>
+	<author>Nguyen Van Tuyen</author>
+	<creationDate>20/12/2012</creationDate>
+	<copyright>Copyright (C) 2010 VTEM. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>tuyen0110@gmail.com</authorEmail>
+	<authorUrl>www.vtem.net</authorUrl>
+	<version>1.0</version>
+	<description><![CDATA[
+		<style type="text/css">
+			span.readonly { padding: 10px; font-family: Arial; font-size:13px !important; font-weight: normal !important; text-align: justify; color: #4d4d4d; line-height: 24px; }
+			span.readonly h1 { clear:both; font-family: Georgia, sans-serif; font-size:38px; margin:5px 5px 23px; padding:0px 0px 24px 0px; color:#333; border-bottom: 1px solid #eee; font-weight: normal; }
+		</style>		
+		<span class="readonly"><h1>VTEM Popeye</h1><p>VTEM Popeye is an advanced image gallery script built on the JavaScript library jQuery. Use it to save space when displaying a collection of images and offer your users a nice and elegant way to show a big version of your images without leaving the page flow.<br/>
+Though the script is quick and easy to setup, it offers great flexibility in both behaviour and styling.</p>
+		<div><b>Basic:</b><br>
+		{vtempopeye folder=[images/flowers] caption=[Caption1; Caption2; Caption3]} 
+		<br />OR
+		<br />
+		{vtempopeye imagelist=[images/01.jpg; images/02.jpg; images/03.jpg] caption=[Caption1; Caption2; Caption3]} 
+		</div>
+		<br>
+		<p>Find out more about our modules: <a target="_blank" href="http://vtem.net/extensions.html">http://vtem.net/extensions.html</a></p><p>If you feel comfortable with this extension, <a target="_blank" href="http://extensions.joomla.org/extensions/photos-a-images/images/articles-images/23141">Please vote on the JED for the extension!</a></p></span>
+		]]></description>
+	<files>
+		<filename plugin="vtempopeye">vtempopeye.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<media destination="plg_vtempopeye">
+	    <folder>css</folder>
+	    <folder>images</folder>
+	    <folder>js</folder>
+		<filename>index.html</filename>
+	</media>
+
+	<params>
+	    <param name="width" type="text" label="Width" default="320" description="Width of image in px"/>
+		<param name="height" type="text" label="Height" default="200" description="Height of image in px"/>
+		<param name="navigation" type="radio" default="hover" label="Navigation" description="The visibility of the navigation. Can be 'hover' (show on mouseover) or 'permanent'">
+		    <option value="hover">Hover</option>
+			<option value="permanent">Permanent</option>
+		</param>
+		<param name="imageCaption" type="radio" default="hover" label="Caption" description="The visibility of the caption. Can be 'hover' (show on mouseover) or 'permanent'">
+		    <option value="hover">Hover</option>
+			<option value="permanent">Permanent</option>
+		</param>
+		<param name="direction" type="radio" default="right" label="Direction" description="Direction that popeye-box opens, can be 'left' or 'right'.">
+			<option value="right">Right</option>
+			<option value="left">Left</option>
+		</param>
+		<param name="duration" type="text" label="Duration" default="240" description="Duration of transitional effect when enlarging or closing the box."/>
+		<param name="opacity" type="text" label="Opacity" default="0.8" description="Opacity of navigational overlay. Select values from 0.1 to 1"/>
+		<param name="autoslide" type="radio" default="0" label="AutoPlay" description="Should the slideshow start automatically?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>		
+		<param name="slidespeed" type="text" label="Slide speed" default="5000" description="Slideshow speed in milliseconds"/>
+		<param name="spacer1" type="spacer" />
+		<param name="script" type="radio" default="1" label="jQuery library" description="Option to load jquery script into your site">
+			<option value="0">Disable</option>
+			<option value="1">Enable</option>
+		</param>  
+	</params>
+	
+	<config>
+		<fields name="params">
+		  <fieldset name="basic">
+		    <field name="width" type="text" label="Width" default="320" description="Width of image in px"/>
+		    <field name="height" type="text" label="Height" default="200" description="Height of image in px"/>
+			<field name="navigation" type="list" default="hover" label="Navigation" description="The visibility of the navigation. Can be 'hover' (show on mouseover) or 'permanent'">
+				<option value="hover">Hover</option>
+				<option value="permanent">Permanent</option>
+			</field>
+			<field name="imageCaption" type="list" default="hover" label="Caption" description="The visibility of the caption. Can be 'hover' (show on mouseover) or 'permanent'">
+				<option value="hover">Hover</option>
+				<option value="permanent">Permanent</option>
+			</field>
+			<field name="direction" type="radio" default="right" label="Direction" description="Direction that popeye-box opens, can be 'left' or 'right'.">
+				<option value="right">Right</option>
+				<option value="left">Left</option>
+			</field>
+			<field name="duration" type="text" label="Duration" default="240" description="Duration of transitional effect when enlarging or closing the box."/>
+			<field name="opacity" type="text" label="Opacity" default="0.8" description="Opacity of navigational overlay. Select values from 0.1 to 1"/>
+			<field name="autoslide" type="radio" default="0" label="AutoPlay" description="Should the slideshow start automatically?">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</field>		
+			<field name="slidespeed" type="text" label="Slide speed" default="5000" description="Slideshow speed in milliseconds"/>
+			<field name="spacer1" type="spacer"  hr="true"/>
+			<field name="script" type="radio" default="1" label="jQuery library" description="Option to load jquery script into your site">
+				<option value="0">Disable</option>
+				<option value="1">Enable</option>
+			</field>  
+		  </fieldset>
+		</fields>
+	</config>
+</install>

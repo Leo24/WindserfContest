@@ -1,0 +1,55 @@
+/**
+ * @version		2.5.3
+ * @package		Simple Image Gallery Pro
+ * @author    JoomlaWorks - http://www.joomlaworks.gr
+ * @copyright	Copyright (c) 2006 - 2011 JoomlaWorks Ltd. All rights reserved.
+ * @license		Commercial - This code cannot be redistributed without permission from JoomlaWorks Ltd.
+ */
+
+/* --- Generic Styling --- */
+a:active,a:focus { outline:0; }
+table.contentpaneopen { width:100%; }
+li.sigProClear { clear:both; float:none!important; height:0!important; line-height:0!important; border:none!important; background:none!important; width:auto; margin:0!important; padding:0!important; }
+
+/* Container */
+div.sigProGalleriaContainer { background:#333; margin:8px 0; padding:16px; clear:both; }
+	div.sigProGalleriaPlaceholderContainer {background:url(../images/loader.gif) no-repeat 50% 50%; }
+		div.sigProGalleriaPlaceholder { }
+ul.sigProGalleria { margin:0 auto!important; padding:0!important; list-style:none; clear:both; overflow:hidden; }
+ul.sigProGalleriaSingleThumb { }
+
+/* Placeholder */
+a.sigProGalleriaTargetLink { display:block; }
+a.sigProGalleriaTargetLink img { display:block; width:100%; height:auto; }
+p.sigProGalleriaTargetTitle { display:block; font-size:24px; line-height:120%; padding:4px; font-family:Georgia, "Times New Roman", Times, serif; color:#eee; }
+
+/* Thumbnail */
+ul.sigProGalleria li.sigProThumb { float:left; background:none!important; margin:0 2px 2px 0; padding:0; border:none!important; }
+ul.sigProGalleria li.sigProThumb span.sigProLinkOuterWrapper { }
+ul.sigProGalleria li.sigProThumb span.sigProLinkWrapper { }
+ul.sigProGalleria li.sigProThumb a.sigProLink,ul.sigProGalleria li.sigProThumb a.sigProLink:hover { position:relative; display:block; padding:0; margin:0; overflow:hidden; }
+ul.sigProGalleria li.sigProThumb a.sigProLink { color:#333; background-color:#555; border:4px solid #555; }
+ul.sigProGalleria li.sigProThumb a.sigProLink:hover { color:#eee; text-decoration:none; background-color:#f4f2ed; border:4px solid #f4f2ed; }
+ul.sigProGalleria li.sigProThumb a.sigProLinkSelected { border:4px solid #999; }
+ul.sigProGalleria li.sigProThumb a.sigProLink img.sigProImg,ul.sigProGalleria li.sigProThumb a.sigProLink:hover img.sigProImg { display:block; padding:0; margin:0; border:none; background-repeat:no-repeat; background-position:50% 50%; }
+
+/* Caption */
+ul.sigProGalleria span.sigProPseudoCaption,ul.sigProGalleria span.sigProCaption { display:none; }
+ul.sigProGalleria li.sigProThumb a.sigProLink:hover span.sigProCaption { display:block; position:absolute; bottom:0; left:0; right:0; text-align:center; padding:4px 0 0; color:#eee; font-size:11px; font-weight:normal; font-family:Georgia, "Times New Roman", Times, serif; background:#333; opacity:0.8; }
+ul.sigProGalleria span.sigProPseudoCaption b { display:block; position:absolute; bottom:0; left:0; right:0; text-align:center; padding:4px 0 0; font-size:11px; font-weight:normal; font-family:Georgia, "Times New Roman", Times, serif; visibility:hidden; }
+
+/* Popup */
+span.sigProPopupCaption { font-weight:bold; color:#C63C13; font-size:13px; font-family:Georgia, "Times New Roman", Times, serif; }
+a.sigProDownloadLink,a.sigProDownloadLink:hover { background:url(../images/disk.png) no-repeat left center; padding:4px 0 4px 20px; }
+div.sigProModulePosition { text-align:center; border-top:1px solid #ccc; border-bottom:1px solid #ccc; padding:4px; margin:8px 0; background:#ffffdd; }
+
+/* IE specific styling: Use "body.sigProIsIEX element {}" - where X is 6, 7 or 8 - to target elements for these browser versions only */
+body.sigProIsIE6 { }
+body.sigProIsIE7 { }
+body.sigProIsIE8 { }
+
+/* Flickr Set link */
+a.sigProFlickrSetLink {display:block;clear:left;padding:2px 8px;}
+
+/* Print message */
+.sigProPrintMessage {display:none;}

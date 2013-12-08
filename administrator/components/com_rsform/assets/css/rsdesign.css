@@ -1,0 +1,186 @@
+/*Dashboard Style */
+table.rsproduct {
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+
+}
+table.rsproduct tr th, #info {
+	background: #cee1f5;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	padding: 7px;
+}
+
+table.rsproduct tr td {
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	padding: 7px;
+}
+
+table.rsproduct a {
+	color: #0B55C4;
+	text-decoration: none;
+}
+
+table.rsproduct a:hover {
+	text-decoration: underline;
+}
+
+table.rsproduct td#rs_logo_bg {
+	background: #f6f6f6;
+}
+
+table.rsproduct #rs_code {
+	padding: 5px;  
+	font-size: 15px;
+	text-shadow: 0px 1px 0px #fff;  
+	outline: none;  		
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+
+/*Button style*/	
+table.rsproduct a#rs_button , button#rs_button,input#rs_button, .rs_button, .rs_button_sml{
+	background-color: #D7E5F5;
+	background-image: -moz-linear-gradient(center top , #D7E5F5, #CBE0F5) !important;
+	border-color: #ABBBCC #A7B6C7 #A1AFBF;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: 0 1px 0 0 white inset;
+	color: #1A3E66;
+	font-size: 12px;
+	padding: 6px 25px 7px 25px;
+	text-align: center;
+	text-shadow: 0 1px 1px #FFFFFF;
+	display: block;
+	text-decoration:none !important;
+	margin: 2px;
+}
+
+table.rsproduct a:hover#rs_button , button:hover#rs_button, input:hover#rs_button, .rs_button:hover, .rs_button_sml:hover{
+	background-color: #CCD9E8;
+	background-image: -moz-linear-gradient(center top , #CCD9E8, #C1D4E8) !important;
+	border-color: #A1AFBF #9CAABA #96A3B3;
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: 0 1px 0 0 #F2F2F2 inset;
+	color: #163659;
+	text-decoration:none !important;
+	cursor: pointer;
+}
+.rs_button_sml {	padding: 0px 7px 0px 5px !important; font-size:10px !important;}
+/*Widths*/
+.rs_100{width:100% !important;}
+.rs_75 {width:75% !important;}
+.rs_50 {width:50% !important;}
+.rs_40 {width:40% !important;}
+.rs_35 {width:35% !important;}
+.rs_30 {width:30% !important;}
+.rs_25 {width:25% !important;}
+.rs_20 {width:20% !important;}
+.rs_15 {width:15% !important;}
+.rs_10,#dateFrom, #dateTo {width:10% !important;}
+.rs_5  {width:5% !important;}
+
+/*Inputs Select Textarea */
+
+.rs_inp, #dateFrom, #dateTo {
+	padding: 7px 5px 6px 5px;
+	background: #FEFEFE url(../images/rsdesign/inpbg.png) repeat-x left bottom;
+	border: 1px solid #e2e1e1;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	width: 94%;
+	font-size:14px;
+	margin:0px !important;
+}
+
+.rs_sel{
+	padding: 7px 5px;
+	background: #ffffff url(../images/rsdesign/textareabg.png) repeat-x left bottom;
+	border: 1px solid #e2e1e1;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	width: auto;
+	font-size:14px;
+}
+
+.rs_textarea {
+	padding: 7px 5px;
+	background: #ffffff url(../images/rsdesign/textareabg.png) repeat-x left bottom;
+	min-height:220px;
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif !important;
+	border: 1px solid #e2e1e1;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+textarea.rs_textarea:focus {
+	background-color: #fff;
+}
+
+.rs_right{float:right;}
+.rs_left{float:left;}
+.rs_clickable {cursor:pointer;}
+.rs_leftspace {margin-left:5px;}
+.rs_rightspace {margin-right:5px;}
+.rs_fixed {position:fixed; top:1px;}
+
+/*Joomla 1.5 label cells are grey*/
+/* table.admintable, table.adminform, table.admintable tr td.key { background:#FFFFFF !important; border:1px solid #FFFFFF !important;} */
+.jpane-slider {background:#FFFFFF !important;}
+
+table.rsc_groups_options tr td {padding:5px;}
+table#simple button.rs_button {width:10%;}
+.rs_clear {clear:both;display:block;}
+.rs_bold {font-weight:bold;}
+
+.rs_label {
+	width:25%;
+	display:block;
+	float:left;
+	padding-left:2%; 
+	font-size: 14px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #4f4f4f4;
+}
+
+.rs_chk { float:left;margin-left:1%;}
+.rs_input_row {margin:2px 0px;float:left; width:100%;}
+.rs_input_row label{clear:none; padding-top:3px;float:left;}
+
+.rs_error{
+	background-color: #FFDFDF;
+	border:1px solid #FF6F6F;
+	padding:7px;
+	display:block;
+	width:94%;
+}
+
+.rs_success{
+	background-color: #CFFFDA;
+	border: 1px solid #4FFF77;
+	padding:7px;
+	display:block;
+	width:94%;
+}
+.calendar {
+	line-height:12px;
+}
+
+@media (max-width: 480px) {
+	#search.rs_10 {
+		width: 100% !important;
+	}
+}

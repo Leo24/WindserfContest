@@ -1,0 +1,106 @@
+/**
+ * @version		2.5.3
+ * @package		Simple Image Gallery Pro
+ * @author    JoomlaWorks - http://www.joomlaworks.gr
+ * @copyright	Copyright (c) 2006 - 2011 JoomlaWorks Ltd. All rights reserved.
+ * @license		Commercial - This code cannot be redistributed without permission from JoomlaWorks Ltd.
+ */
+
+/* --- Generic Styling --- */
+a:active,a:focus { outline:0; }
+table.contentpaneopen { width:100%; }
+li.sigProClear { clear:both; float:none!important; height:0!important; line-height:0!important; border:none!important; background:none!important; width:auto; margin:0!important; padding:0!important; }
+
+/* Container */
+ul.sigProPolaroids { margin:20px!important; padding:40px 60px!important; list-style:none; clear:both; overflow:hidden; }
+ul.sigProPolaroids { margin:0!important; padding:8px 36px 8px 16px!important; list-style:none!important; float:left; }
+
+/* Thumbnail: use e.g. width:33%; to force 3 columns */
+ul.sigProPolaroids li.sigProThumb { display:block; float:left; background:#fff!important; list-style:none!important; margin:20px 0 27px 30px; padding:10px; text-align:center; text-decoration:none; color:#333; font-family:'Indie Flower', arial, serif; font-size:18px;
+    -moz-box-shadow: 0px 3px 6px rgba(0,0,0,.25);
+ -webkit-box-shadow: 0px 3px 6px rgba(0,0,0,.25);
+         box-shadow: 0px 3px 6px rgba(0,0,0,.25);
+
+    -moz-transition: 0 0.15s linear;
+      -o-transition: 0 0.15s linear;
+ -webkit-transition: 0 0.15s linear;
+     -ms-transition: 0 0.15s linear;
+         transition: 0 0.15s linear;
+
+		 -moz-transform: rotate(-2deg);
+       -o-transform: rotate(-2deg);
+  -webkit-transform: rotate(-2deg);
+      -ms-transform: rotate(-2deg);
+          transform: rotate(-2deg);
+             filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9993908270190958, M12=0.03489949670250097, M21=-0.03489949670250097, M22=0.9993908270190958, sizingMethod='auto expand');
+               zoom: 1;
+}
+ul.sigProPolaroids li.sigProThumb:nth-child(even) {
+     -moz-transform: rotate(2deg);
+       -o-transform: rotate(2deg);
+  -webkit-transform: rotate(2deg);
+      -ms-transform: rotate(2deg);
+          transform: rotate(2deg);
+             filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9993908270190958, M12=-0.03489949670250097, M21=0.03489949670250097, M22=0.9993908270190958, sizingMethod='auto expand');
+               zoom: 1;
+
+}
+ul.sigProPolaroids li.sigProThumb:nth-child(3n) { position:relative; top:-5px;
+     -moz-transform: rotate(0deg);
+       -o-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+             filter: progid:DXImageTransform.Microsoft.Matrix(M11=1, M12=0, M21=0, M22=1, sizingMethod='auto expand');
+               zoom: 1;
+}
+ul.sigProPolaroids li.sigProThumb:nth-child(5n) { position:relative; right:5px;
+     -moz-transform: rotate(5deg);
+       -o-transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+      -ms-transform: rotate(5deg);
+          transform: rotate(5deg);
+             filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9961946980917455, M12=-0.08715574274765817, M21=0.08715574274765817, M22=0.9961946980917455, sizingMethod='auto expand');
+               zoom: 1;
+}
+ul.sigProPolaroids li.sigProThumb:nth-child(8n) { position:relative; right:5px; top:8px; }
+ul.sigProPolaroids li.sigProThumb:nth-child(11n) { position:relative; left:-5px; top:3px; }
+
+ul.sigProPolaroids li.sigProThumb:hover { position:relative;
+ -webkit-transform:scale(1.2);
+    -moz-transform:scale(1.2);
+      -o-transform:scale(1.2);
+
+   -moz-box-shadow: 0px 3px 6px rgba(0,0,0,.5);
+-webkit-box-shadow: 0px 3px 6px rgba(0,0,0,.5);
+        box-shadow: 0px 3px 6px rgba(0,0,0,.5);
+}
+
+ul.sigProPolaroids li.sigProThumb a.sigProLink { color:#333; text-decoration:none; overflow:hidden; }
+ul.sigProPolaroids li.sigProThumb a.sigProLink img.sigProImg { display:block; width:100%; height:100%; margin-bottom:8px; background-repeat:no-repeat; background-position:50% 50%;}
+
+/* Caption */
+ul.sigProPolaroids span.sigProPseudoCaption,ul.sigProPolaroids span.sigProCaption { display:block; text-align:center; font-family:'Indie Flower', arial, serif; font-size:22px; font-weight:bold; }
+
+/* Popup */
+span.sigProPopupCaption { font-weight:bold; color:#C63C13; font-size:13px; font-family:Georgia, "Times New Roman", Times, serif; }
+a.sigProDownloadLink,a.sigProDownloadLink:hover { background:url(../images/disk.png) no-repeat left center; padding:4px 0 4px 20px; }
+div.sigProModulePosition { text-align:center; border-top:1px solid #ccc; border-bottom:1px solid #ccc; padding:4px; margin:8px 0; background:#ffffdd; }
+
+/* IE specific styling: Use "body.sigProIsIEX element {}" - where X is 6, 7 or 8 - to target elements for these browser versions only */
+body.sigProIsIE6 ul.sigProPolaroids li.sigProThumb,
+body.sigProIsIE7 ul.sigProPolaroids li.sigProThumb,
+body.sigProIsIE8 ul.sigProPolaroids li.sigProThumb {border:1px solid #ccc;border-right:2px solid #ccc;border-bottom:2px solid #ccc;font-family:"Comic Sans MS", cursive, sans-serif;}
+body.sigProIsIE6 ul.sigProPolaroids li.sigProThumb span.sigProCaption,
+body.sigProIsIE7 ul.sigProPolaroids li.sigProThumb span.sigProCaption,
+body.sigProIsIE8 ul.sigProPolaroids li.sigProThumb span.sigProCaption {font-family:"Comic Sans MS", cursive, sans-serif;}
+body.sigProIsIE7 ul.sigProPolaroids li.sigProThumb {float:none;display:inline;}
+body.sigProIsIE6 ul.sigProPolaroids li.sigProThumb a.sigProLink:hover,
+body.sigProIsIE7 ul.sigProPolaroids li.sigProThumb a.sigProLink:hover,
+body.sigProIsIE8 ul.sigProPolaroids li.sigProThumb a.sigProLink:hover {color:#125BAE;}
+
+/* Flickr Set link */
+a.sigProFlickrSetLink {display:block;clear:left;padding:2px 8px;}
+
+/* Print message */
+.sigProPrintMessage {display:none;}

@@ -1,0 +1,24 @@
+/**
+* @version 1.3.0
+* @package RSform!Pro 1.3.0
+* @copyright (C) 2007-2010 www.rsjoomla.com
+* @license GPL, http://www.gnu.org/copyleft/gpl.html
+*/
+
+#rsform_container input,
+.com-rsform-css-fix input
+{
+	float: none !important;
+}
+
+#rsform_container label,
+.com-rsform-css-fix label
+{
+	float: none !important;
+	display: inline !important;
+}
+
+fieldset img {
+	float: none !important;
+	margin: 0 !important;
+}

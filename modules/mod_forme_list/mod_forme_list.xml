@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<install type="module" version="1.5.0">
+	<name>RSform! Frontend List</name>
+	<author>www.rsjoomla.com</author>
+	<creationDate>May 2007</creationDate>
+	<copyright>(C) 2007 www.rsjoomla.com. All rights reserved.</copyright>
+	<license>Commercial License, http://www.rsjoomla.com/license/forme.html</license>
+	<authorEmail>alex@rsjoomla.com</authorEmail>
+	<authorUrl>www.rsjoomla.com</authorUrl>
+	<version>1.0.4</version>
+	<description>This module is used to display forms created with RSform!.</description>
+	<files>
+	<filename module="mod_forme_list">mod_forme_list.php</filename>
+	</files>
+	<params>
+		<param name="form_id" type="text" default="1" label="Form ID #" description="The id of the Form. You can find it in your List Forms screen (the last column)." />
+		<param name="template_module" type="textarea" default="&lt;table width=&quot;100%&quot;&gt;{formdata}&lt;/table&gt;" label="Module Layout" description="This HTML code is parsed in the module position you choose. Do not remove {formdata} tag from this, since it is replaced with the data output." cols="60" rows="7"/>
+		<param name="template_formdatarow" type="textarea" default="&lt;tr&gt;&lt;td&gt;{fullname}&lt;/td&gt;&lt;td&gt;{email}&lt;/td&gt;&lt;/tr&gt;" label="Row Layout" description="This HTML code is parsed and all your field id's like {fullname} are replaced with users data." cols="60" rows="7" />
+		<param name="limit" type="text" default="30" label="Page Limit" description="# of rows displayed per page. 0 for no limit." />
+	</params>
+</install>

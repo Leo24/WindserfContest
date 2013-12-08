@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" method="upgrade">
+<name>Responsive Photo Gallery</name>
+<creationDate>May 2012</creationDate>
+<version>2.0.0</version>
+<author>GraphicAholic</author>
+<copyright>Copyright 2012 - graphicaholic.com</copyright>
+<license>http://www.gnu.org/copyleft/lgpl.html</license>
+<authorEmail>support@graphicaholic.com</authorEmail>
+<authorUrl>http://www.graphicaholic.com/demos</authorUrl>
+	<description><![CDATA[<img src="../modules/mod_responsivegallery/images/ResponsivePhotoGallery.jpg" alt="Responsive Photo Gallery" /><p><strong>Responsive Photo Gallery (c) 2012</strong> is a GPL Joomla! module from <strong><a href="http://www.graphicaholic.com" target="_blank" >GraphicAholic</a></strong></p><p>Responsive Photo Gallery is a full featured and easy to use 'responsive' photo gallery for Joomla 2.5.</p><p>Responsive Photo Gallery requires the <strong><a href="http://www.jquery.com/" target="_blank">jQuery 1.7.x Library script</a>.</strong> </p><p><strong><u>USAGE</u> :</strong> <p>Your first step is to make a new folder inside your Joomla 'images' directory and upload your photos into this newly created folder. Now, adjust the module options on the right to your needs, select your module position, publish the module, assign it to your menus, save and DONE!</p><p>The power is in the code... With only a few options to set, you'll have your very own Responsive Photo Gallery up and running in no time.</p><p>Like all extensions, there are a few key rules to follow.</p><ol><li>1: You must use the latest jQuery Library Script (1.7.x). NO EXCEPTIONS!</li><li>2: If your using more then one Responsive Photo Gallery on a single page you'll need to assign each one with a unique 'Gallery Number' (Ranges are 1 to 50).</li><li>3: If your using more then one Responsive Photo Gallery on a single page, they must all use the same 'Carousel Position'.</li><li><u>PLEASE NOTE</u>: If you do not follow the three basic rules above, Responsive Photo Gallery will not work.</li><li>Supported Browsers: IE8+, FireFox, Safari, Chrome, Smartphone & Touch Pad browsers.</li><li>Version 2.0.0: Initial Release</li></ol></p><p>For additional documentations and useful tips, head over to <a href="http://www.graphicaholic.com" target="_blank" >GraphicAholic's</a> website.</p><p>Responsive Photo Gallery is based on Mary Lou's Responsive Image Gallery over at <a href="http://tympanus.net/codrops/2011/09/20/responsive-image-gallery/" target="_blank" >Codrops</a>.</p>]]>
+	</description>
+	<files>
+		<filename module="mod_responsivegallery">mod_responsivegallery.php</filename>
+        <folder>js</folder>
+        <folder>css</folder>
+        <folder>images</folder>
+        <folder>elements</folder>
+        <folder>tmpl</folder>
+		<filename module="mod_responsivegallery">class.rgThumbnail.php</filename>
+		<filename module="mod_responsivegallery">helper.php</filename>
+		<filename module="mod_responsivegallery">index.html</filename>
+		<filename module="mod_responsivegallery">index.html</filename>
+	</files>
+	<params addpath="">
+		</params>
+	<config>    
+	<fields name="params" addfieldpath="/modules/mod_responsivegallery/elements">
+	<!-- General Settings -->
+	<fieldset name="general" group="general" label="General Settings">
+	<field name="load_jquery" type="radio" default="0" label="Load jQuery?" description="Load the jQuery Library Script?">	
+			<option value="0">No</option>	
+			<option value="1">Yes</option>
+	</field>
+	<field name="path" type="foldertree" default="" directory="images" filter="" label="Photo directory" description="Select a image directory" />
+	<field name="styles" type="list" default="1" label="Theme" description="Select what theme you wish to use.">
+			<option value="1">Dark Style</option>	
+			<option value="2">Light Style</option>
+	</field>
+	<field name="galleryNumber" type="text" default="1" label="Gallery Number" description="If you place more then one Responsive Photo Gallery on a page, make this setting unique to the other modules. You do not need to adjust this setting if only one Responsive Photo Gallery is on a page. You can have up to 50 Responsive Photo Galleries per single page." />
+	<field name="filteringspacer00" type="spacer" hr="true" />
+	<field name="info1" type="info" default="The setting below is 'Global' to a page. If you are going to have two or more galleries on the same page, each gallery MUST have the same setting below. This does not effect a single gallery on a single page." />
+	<field name="thumbPosition" type="radio" default="1" label="Carousel Position?" description="Select if you want the Carousel thumbsnails to be positioned above or below your main photo.">
+			<option value="1">Above</option>	
+			<option value="2">Below</option>
+	</field>
+	<field name="filteringspacer01" type="spacer" hr="true" />
+	<field name="thumbwidth" type="text" default="64px" label="Thumbnail Width" description="Width of thumbnail." />
+	<field name="thumbheight" type="text" default="44px" label="Thumbnail Height" description="Height of thumbnail." />
+	<field name="thumbratio" type="radio" default="0" label="Keep thumbnail ratio?" description="Keep thumbnail ratio to original image?">
+			<option value="0">No</option>
+			<option value="1">yes</option>
+	</field>
+	</fieldset>
+	<fieldset name="advanced" group="advanced" label="Advanced Options">
+        <field name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+        </field>
+        <field name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+
+</fieldset>
+</fields>
+</config>
+</install>

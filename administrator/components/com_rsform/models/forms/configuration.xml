@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>  
+	<fieldset name="configuration" label="RSFP_CONFIG">
+		<field name="global.codemirror" type="radio" class="btn-group" description="RSFP_ENABLE_SYNTAX_HIGHLIGHTING_DESC" label="RSFP_ENABLE_SYNTAX_HIGHLIGHTING" size="1" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="auto_responsive" type="radio" class="btn-group" description="RSFP_ENABLE_AUTO_RESPONSIVE_DESC" label="RSFP_ENABLE_AUTO_RESPONSIVE" size="1" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+	</fieldset>
+	<fieldset name="updates" label="RSFP_UPDATE">
+		<field name="global.register.code" type="text" description="RSFP_CODE_DESC" label="RSFP_CODE" size="70" />
+	</fieldset>
+</form>

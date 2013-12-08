@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>Sj Image Slideshow</name>
+	<creationDate>May 2013</creationDate>
+	<author>YouTech Company</author>
+	<copyright>Copyright (c) 2009-2013 YouTech Company</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>contact@ytcvn.com</authorEmail>
+	<authorUrl>http://www.smartaddons.com</authorUrl>
+	<version>1.0</version>
+	<description>TPL_YTFRAMEWORK_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_sj_image_slideshow">mod_sj_image_slideshow.php</filename>
+		<filename>index.html</filename>
+        <folder>tmpl</folder>
+        <folder>assets</folder>
+        <folder>language</folder>
+        <folder>core</folder>
+	</files>
+	<languages />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                <field name="moduleclass_sfx" type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="layout" type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />		
+			</fieldset>
+			
+           <fieldset name="SOURCE_OPTIONS_LABEL" label="SOURCE_OPTIONS_LABEL">
+				<field name="folder" type="text" size="50" default="images/photo" label="IMAGE_FOLDER_LABEL" description="Image Folder" />
+				<field name="count_items" type="text" default="5" label="Count" description="The number of images to display. The default value of 0 will display all images. 20 is maximum" />
+				<field name="orderby" type="list" default="0"  label="SORT_TYPE_LABEL" description="SORT_TYPE_DESC">
+					<option value="0">Name</option>
+					<option value="1">Time</option>
+				</field>
+				<field name="sort" type="list" default="0" label="SORT_ORDER_LABEL" description="SORT_ORDER_DESC">
+					<option value="0">Random</option>
+					<option value="1">Ascending</option>
+					<option value="2">Descending</option>
+				</field>
+				<field name="description" type="textarea" cols="60" rows="10" filter="safehtml" default="img1.jpg:title=Title 1&amp;desc=This is description for image 1&amp;link=http://www.google.com&amp;target=_blank" label="DESCRIPTION_SOURCE_LABEL" description="DESCRIPTION_SOURCE_DESC" />
+            </fieldset>		
+			
+			<fieldset name="ITEM_OPTIONS_LABEL" label="ITEM_OPTIONS_LABEL">
+                <field name="item_title_display" type="radio" class="btn-group" default="1" label="DISPLAY_TITLE_LABEL" description="DISPLAY_TITLE_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="item_title_max_characs" type="text" default="20" label="TITLE_MAXLENGTH_LABEL" description="TITLE_MAXLENGTH_DESC" />
+                <field name="show_introtext" type="radio" class="btn-group" default="1" label="DISPLAY_DESCRIPTION_LABEL" description="DISPLAY_DESCRIPTION_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="introtext_limit" type="text" default="100" label="DESCRIPTION_MAXLENGTH_LABEL" description="DESCRIPTION_MAXLENGTH_DESC" />
+				<field name="item_readmore_display" type="radio" default="1" class="btn-group" label="DISPLAY_READMORE_LABEL" description="DISPLAY_READMORE_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_readmore_text" type="text" default="Read more" label="Read More Text" description="Insert text for link of read more" />
+			</fieldset>
+
+			<fieldset name="IMAGE_OPTIONS_LABEL" label="IMAGE_OPTIONS_LABEL">
+			    <field name="imgcfg_function" type="list" label="RESIZE_MODE_LABEL" description="RESIZE_MODE_DESC">
+				     <option value="none">None</option>
+				     <option value="resize_center">Center</option>
+				     <option value="resize_fill">Fill</option>
+				     <option value="resize_fit">Fit</option>
+				     <option value="resize_stretch">Stretch</option>
+			    </field>
+			    <field name="imgcfg_type" type="list" default="" label="IMAGE_TYPE_LABEL" description="IMAGE_TYPE_DESC">
+				     <option value="">Default</option>
+				     <option value="1">GIF</option>
+				     <option value="2">JPEG</option>
+				     <option value="3">PNG</option>
+			    </field>
+			    <field name="imgcfg_transparency" label="KEEP_TRANSPARENCY_LABEL" class="btn-group" description="KEEP_TRANSPARENCY_DESC" type="radio" default="1">
+				     <option value="1">Yes</option>
+				     <option value="0">No</option>
+			    </field>
+			    <field name="imgcfg_width" type="text" default="600" label="IMAGE_WIDTH_LABEL" description="IMAGE_WIDTH_DESC" />
+			    <field name="imgcfg_height" type="text" default="400" label="IMAGE_HEIGHT_LABEL" description="IMAGE_HEIGHT_DESC" />
+			    <field name="imgcfg_background" type="color" default="#FFFFFF" label="BACKGROUND_LABEL" description="BACKGROUND_DESC" />
+			</fieldset> 
+			
+			<fieldset name="EFFECT_OPTIONS_LABEL" label="EFFECT_OPTIONS_LABEL">
+				<!-- <field name="startingSlide" type="text" default="1" label="START_SLIDE_LABEL" description="START_SLIDE_DESC" /> -->
+				<field name="pauseOnHover" type="radio" default="1" class="btn-group" label="PAUSE_ON_HOVER_LABEL" description="PAUSE_ON_HOVER_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+                <field name="play" type="radio" default="1" class="btn-group" label="AUTO_PLAY_LABEL" description="AUTO_PLAY_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>				
+				<field name="speed" type="text" default="500" label="SPEED_LABEL" description="SPEED_DESC" />
+				<field name="timeout" type="text" default="4000" label="TIMEOUT_LABEL" description="TIMEOUT_DESC" />
+				<field name="swipe" type="radio" default="1" class="btn-group" label="SWIPE_LABEL" description="SWIPE_DESC">
+					<option value="1">Yes</option>
+                    <option value="0">No</option>
+				</field>
+				  <field name="progress" type="radio" default="0" class="btn-group" label="PROGRESS_BAR_LABEL" description="PROGRESS_BAR_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="effect" type="list" class="btn-group" default="random" label="EFFECT_TYPE_LABEL" description="EFFECT_TYPE_DESC">
+                    <option value="none">EFFECT_NONE</option>
+                    <option value="fade">EFFECT_FADE</option>
+					<option value="scrollHorz">EFFECT_SCROLLHORZ</option>
+					<option value="scrollVert">EFFECT_SCROLLVERT</option>
+					<option value="tileSlide">EFFECT_TITLESLIDE</option>
+					<option value="tileBlind">EFFECT_TITLEBLIND</option>
+					<option value="shuffle">EFFECT_SHUFFLE</option>
+					<option value="random">EFFECT_RANDOM</option>
+                </field>
+				<field name="overlay_effect" type="radio" class="btn-group" default="none" label="EFFECT_CAPTIONS_OVERLAYS_LABEL" description="EFFECT_CAPTIONS_OVERLAYS_LABEL">
+                     <option value="none">EFFECT_NONE</option>
+					<option value="fade">EFFECT_FADE</option>
+					<option value="slide_up_down">EFFECT_SLIDEUPDOWN</option>
+                </field> 				
+			</fieldset>	
+			
+			<fieldset name="advanced">
+				<field name="include_jquery" class="btn-group" type="radio" default="1"
+					label="INCLUDE_JQUERY_LABEL" description="INCLUDE_JQUERY_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="pretext" type="textarea" default="" label="PRE_TEXT_LABEL"
+					description="PRE_TEXT_DESC" cols="40" rows="4" filter="raw" />
+				<field name="posttext" type="textarea" default="" label="POST_TEXT_LABEL"
+					description="POST_TEXT_DESC" cols="40" rows="4" filter="raw" />
+				<field name="owncache" type="list" default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

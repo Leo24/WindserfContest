@@ -1,0 +1,132 @@
+.ppy-outer{display:none;}
+.ppy-active .ppy-outer{display:block;}
+.ppy-stage{background-repeat:no-repeat !important; background-position:center center !important; position:relative; cursor:pointer;}
+.ppy-placeholder{position:relative;}
+.ppy-caption,
+.ppy-captionwrap{overflow:hidden; display:block;}
+.ppy-hidden, 
+.style1 .ppy-play, 
+.style1 .ppy-pause,
+.style2 .ppy-play, 
+.style2 .ppy-pause,
+.style5 .ppy-play, 
+.style5 .ppy-pause,
+.style4 .ppy-play, 
+.style4 .ppy-pause{display: none !important;}
+.ppy-imglist{width:100%; display:block; overflow:hidden;}
+.ppy-imglist li{padding:10px; list-style:none; float:left; display:block; margin:0 10px 10px 0;}
+.ppy-imglist li a img{display:block; border:0;}
+.ppy-outer{padding:10px; background:#f5f5f5; border:1px solid #ccc; color:#777;}
+.ppy-caption a{color: #666;}
+.ppy-caption a:hover{text-decoration:underline;}
+.ppy-outer:hover,
+.ppy-expanded .ppy-outer{box-shadow: 0 0 7px #ccc;}
+.ppy-caption{margin:5px 0 0 0; padding:10px; font-size:0.9em; line-height:1.3em; color:#777; background:#f5f5f5; box-shadow:0 0 7px #ccc; border:1px solid #ccc;visibility:hidden;}
+.ppy-prev,.ppy-next,.ppy-switch-enlarge,.ppy-switch-compact,.ppy-play,.ppy-pause{background:url(../images/icon.png) no-repeat center !important;}
+/*//////////////////STYLES//////////////////////*/
+/* popeye example 1 */
+.style1.ppy-active {float:left; margin:0 20px 10px 0;}
+.style1 .ppy-counter{padding:0 0 2px 0; margin:0 0 5px 0; font-size:0.9em; border-bottom:1px solid #ddd;}
+.style1 .ppy-loading{background:#f5f5f5 url(../images/loading.gif) no-repeat center !important;}
+.style1 .ppy-nav {
+	background: rgb(51,51,51); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(51,51,51,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(51,51,51,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(51,51,51,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(51,51,51,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(51,51,51,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(51,51,51,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+    width:          104px;
+    height:         32px;
+    padding:        5px;
+    position:       absolute;
+    top:            0;
+    left:           0;  
+}
+.style1 .ppy-nav a{
+    display:        block;
+    overflow:       hidden;
+    text-indent:    -900em;
+    height:         22px;
+    float:          left;
+    padding:        5px;
+}
+.style1 .ppy-prev{width:22px; background-position:-5px -584px !important;}
+.style1 .ppy-next{width:22px; background-position:-5px -539px !important;}
+.style1 .ppy-switch-enlarge{width:30px; background-position:-2px -500px !important;}
+.style1 .ppy-switch-compact{width:30px; background-position:-2px -465px !important;}
+.style1 .ppy-nav a:hover{cursor:pointer; opacity:0.5;}
+
+
+/* popeye example 2 */
+.style2.ppy-active{float:right; margin:0 0 10px 20px;}
+.style2 .ppy-caption{margin:5px 0 0 0; padding:5px;}
+.style2 .ppy-outer{padding-right:40px;}
+.style2 .ppy-counter{padding:0; font-size:0.8em; position:absolute; bottom:0; right:-30px;}
+.style2 .ppy-loading{background-image:url(../images/loading.gif); background-repeat:no-repeat; background-position:center;}
+.style2 .ppy-nav{width:45px; position:absolute; top:4px; right:-8px;}
+.style2 .nav-wrap{padding:5px 0;}
+.style2 .ppy-nav a{
+    display:block;
+    overflow:hidden;
+    text-indent:-900em;
+    padding:5px;
+	margin-bottom:5px;
+    width:20px;
+	height:20px;
+}
+.style2 .ppy-prev{background-position:-5px -72px !important;}
+.style2 .ppy-next{background-position:-5px -3px !important;}
+.style2 .ppy-switch-enlarge{background-position:-5px -37px !important;}
+.style2 .ppy-switch-compact{background-position:-5px -105px !important;}
+.style2 .ppy-nav a:hover{cursor:pointer; opacity:0.8;}
+
+
+
+/* popeye example 3 */
+.style3.ppy-active{float:left; margin:0 20px 10px 0;}
+.style3 .ppy-caption{margin:0; padding:5px; font-size: 0.9em; line-height:1.3em; color:#666; overflow:auto;}
+.style3.ppy-expanded .ppy-caption{margin:0;padding:10px; color:#fff; background:#555; border:1px solid #444;}
+.style3 .ppy-counter{background:#000; color:#fff; padding:3px 8px; position:absolute; top:0; left:0; opacity:0.7;}
+.style3 .ppy-loading{background:#333 url(../images/loading.gif) no-repeat center !important;}
+.style3 .ppy-nav{background:#333; width:100%; height:100%; text-align: center; opacity:0.8;}
+.style3 .nav-wrap{width:104px; height:32px; padding:32% 0 0 0; margin:0 auto;}
+.style3 .ppy-nav a{display:block; overflow:hidden; text-indent:-900em; height:22px; float:left; padding:5px;}
+.style3 .ppy-prev{width:22px; background-position:-5px -584px !important;}
+.style3 .ppy-next{width:22px; background-position:-5px -539px !important;}
+.style3 .ppy-play{width:22px; background-position:-3px -629px !important;}
+.style3 .ppy-pause{width:22px; background-position:-5px -677px !important;}
+.style3 .ppy-nav a:hover{opacity:0.5; cursor: pointer;}
+
+
+/* popeye example 4 */
+.style4.ppy-active{float:left; margin:0 20px 10px 0;}
+.style4 .ppy-caption{padding:5px; font-size: 0.9em; line-height:1.3em; color:#666; overflow:auto;}
+.style4.ppy-expanded .ppy-caption{margin:0;padding:10px; color:#fff; background:#555; border:1px solid #444;}
+.style4 .ppy-counter{padding:0 0 2px 0; margin:0 0 5px 0; font-size:0.9em; border-bottom:1px solid #ddd;}
+.style4 .ppy-loading{background:#333 url(../images/loading.gif) no-repeat center !important;}
+.style4 .ppy-nav{width:100%; height:100%; text-align: center; position:relative;}
+.style4 .nav-wrap{width:100%;background:#666; padding:0; margin:0 auto; opacity:0.8; position: absolute; bottom:0; left:0;}
+.style4 .ppy-nav a{display:block; overflow:hidden; text-indent:-900em; float:left; padding:5px; height:28px;}
+.style4 .ppy-prev{width:28px; background-position:-2px -232px !important; padding:5px; margin:5px;}
+.style4 .ppy-next{width:28px; float:right !important; background-position:-2px -140px !important; padding:5px; margin:5px;}
+.style4 .ppy-nav .ppy-switch-enlarge{width:28px !important; background-position:-2px -185px !important; position:absolute; bottom:5px; left:42%;}
+.style4 .ppy-nav .ppy-switch-compact{width:28px; background-position:-2px -278px !important; position:absolute; bottom:5px; left:48%;}
+.style4 .ppy-nav a:hover{opacity:0.5; cursor: pointer;}
+
+
+/* popeye example 5 */
+.style5.ppy-active{float:left; margin:0 20px 10px 0;}
+.style5 .ppy-caption{margin:5px 0 0 0; padding:5px; font-size: 0.9em; line-height:1.3em; color:#666; overflow:auto;}
+.style5.ppy-expanded .ppy-caption{margin:0;padding:10px; color:#fff; background:#555; border:1px solid #444;}
+.style5 .ppy-counter{position:absolute; bottom:-28px; right:0; font-size:0.8em;}
+.style5 .ppy-loading{background:#333 url(../images/loading.gif) no-repeat center !important;}
+.style5 .ppy-nav{width:100%; text-align: center;}
+.style5 .nav-wrap{width:76px; height:25px; padding:7px 0 0 0; margin:0;}
+.style5 .ppy-nav a{display:block; overflow:hidden; text-indent:-900em; height:15px; float:left; padding:5px;}
+.style5 .ppy-prev{width:15px; background-position:-9px -330px !important;}
+.style5 .ppy-next{width:15px; float:right !important; background-position:-9px -363px !important;}
+.style5 .ppy-switch-enlarge{width:15px; background-position:-9px -397px !important;}
+.style5 .ppy-switch-compact{width:15px; background-position:-9px -430px !important;}
+.style5 .ppy-nav a:hover{opacity:0.5; cursor: pointer;}

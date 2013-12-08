@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content" method="upgrade">
+  <name>Simple Image Gallery PRO (by JoomlaWorks)</name>
+  <author>JoomlaWorks</author>
+  <authorEmail>contact@joomlaworks.gr</authorEmail>
+  <authorUrl>www.joomlaworks.gr</authorUrl>
+  <creationDate>July 26th, 2011</creationDate>
+  <copyright>Copyright (c) 2006 - 2011 JoomlaWorks Ltd. This code cannot be redistributed without permission from JoomlaWorks Ltd.</copyright>
+  <license>Commercial</license>
+  <version>2.5.3</version>
+  <description>JW_SIGP_XML_DESC</description>
+  <params addpath="/plugins/content/jw_sigpro/includes/elements">
+    <param name="galleries_rootfolder" type="text" default="images/stories" label="JW_SIGP_XML_ROOT_FOLDER" description="JW_SIGP_XML_SELECT_THE_STARTING_FOLDER_FOR_ALL_YOUR_IMAGE_GALLERIES_THIS_IS_GENERALLY_PREFERRED_TO_BE_IMAGESSTORIES_SO_YOU_CAN_EASILY_USE_THE_JOOMLA_MEDIA_MANAGER_TO_UPLOAD_YOUR_IMAGES_INTO_SUBFOLDERS_WITHIN_THIS_FOLDER_EG_INSIDE_IMAGESSTORIESGALLERIESSOMEIMAGEGALLERY" />
+    <param name="popup_engine" type="list" default="jquery_slimbox" label="JW_SIGP_XML_POPUP_ENGINE_FOR_IMAGE_GALLERIES" description="JW_SIGP_XML_DEPENDING_ON_WHAT_JAVASCRIPT_LIBRARYFRAMEWORK_YOU_USE_IN_YOUR_SITE_CHOOSE_AN_APPROPRIATE_POPUP_ENGINE_TO_ACHIEVE_MAXIMUM_COMPATIBILITY_AND_AVOID_ANY_JAVASCRIPT_CONFLICTS_POPUP_ENGINES_NOT_BASED_ON_JQUERY_OR_MOOTOOLS_WILL_GENERALLY_BE_NEUTRAL_ON_ALL_JOOMLA_WEBSITES">
+      <option value="jquery_slimbox">JW_SIGP_XML_SLIMBOX2_POWERED_BY_JQUERY</option>
+      <option value="jquery_prettyphoto">JW_SIGP_XML_PRETTYPHOTO_POWERED_BY_JQUERY</option>
+      <option value="jquery_colorbox">JW_SIGP_XML_COLORBOX_POWERED_BY_JQUERY</option>
+      <option value="jquery_fancybox">JW_SIGP_XML_FANCYBOX_POWERED_BY_JQUERY</option>
+      <option value="highslide">JW_SIGP_XML_HIGHSLIDE_WITH_SLIDESHOW</option>
+      <option value="lytebox">JW_SIGP_XML_LYTEBOX_WITH_SLIDESHOW</option>
+      <option value="greybox">JW_SIGP_XML_GREYBOX</option>
+      <option value="mootools_slimbox">JW_SIGP_XML_SLIMBOX_POWERED_BY_MOOTOOLS</option>
+      <option value="simplebox">JW_SIGP_XML_SIMPLEBOX_BY_JOOMLAWORKS</option>
+    </param>
+    <param name="thb_template" type="folderlist" directory="/plugins/content/jw_sigpro/tmpl" default="Classic" hide_default="1" hide_none="1" label="JW_SIGP_XML_LAYOUT_TEMPLATE_FOR_IMAGE_GALLERIES" description="JW_SIGP_XML_CHOOSE_A_TEMPLATE_TO_DISPLAY_YOUR_IMAGE_GALLERIES" />
+    <param name="thb_width" type="text" default="200" size="3" label="JW_SIGP_XML_THUMBNAIL_VIEWPORT_WIDTH" description="JW_SIGP_XML_ADJUST_THE_MAXIMUM_IMAGE_THUMBNAIL_WIDTH_IN_PIXELS" />
+    <param name="thb_height" type="text" default="160" size="3" label="JW_SIGP_XML_THUMBNAIL_VIEWPORT_HEIGHT" description="JW_SIGP_XML_ADJUST_THE_MAXIMUM_IMAGE_THUMBNAIL_HEIGHT_IN_PIXELS" />
+    <param name="smartResize" type="radio" default="1" label="JW_SIGP_XML_SMART_THUMBNAIL_RESIZE_BASED_ON_ABOVE_DIMENSIONS" description="JW_SIGP_XML_IF_SET_TO_DISABLED_IMAGE_THUMBNAILS_ARE_DISPLAYED_BASED_ON_THE_ASPECT_RATIO_OF_THE_ORIGINAL_IMAGE_IF_SET_TO_ENABLED_IMAGES_ARE_RESIZED_TO_FIT_THE_THUMBNAIL_VIEWPORT_AS_SET_ON_THE_DIMENSION_OPTIONS_ABOVE_THE_LAST_OPTION_IS_IDEAL_WHEN_YOU_WANT_TO_DISPLAY_IMAGES_OF_DIFFERENT_ASPECT_RATIO_IN_THUMBNAILS_OF_THE_SAME_DIMENSIONS">
+      <option value="0">JW_SIGP_XML_DISABLED</option>
+      <option value="1">JW_SIGP_XML_ENABLED</option>
+    </param>
+    <param name="jpg_quality" type="text" default="80" size="3" label="JW_SIGP_XML_THUMBNAIL_IMAGE_QUALITY" description="JW_SIGP_XML_ADJUST_THE_QUALITY_OF_THE_GENERATED_IMAGE_THUMBNAIL_VALUES_RANGE_FROM_0_TO_100_WITH_100_GIVING_THE_BEST_POSSIBLE_RESULT_VALUES_BETWEEN_70_TO_80_SHOULD_GENERALLY_BE_PREFERRED_REMEMBER_THAT_THE_LOWER_THIS_VALUE_IS_THE_SMALLER_THE_SIZE_OF_THE_GENERATED_THUMBNAIL_WILL_BE" />
+    <param name="singlethumbmode" type="radio" default="0" label="JW_SIGP_XML_DISPLAY_MODE" description="JW_SIGP_XML_CHOOSE_SINGLE_THUMBNAIL_MODE_TO_LAUNCH_POPUP_SLIDESHOWS_FROM_THE_FIRST_THUMBNAIL_OF_YOUR_GALLERY_USE_THIS_OPTION_WHEN_YOU_WANT_TO_SAVE_SOME_SPACE_IN_YOUR_DOCUMENT_IF_YOU_SELECT_NORMAL_ALL_CORRESPONDING_THUMBNAILS_WILL_DISPLAY">
+      <option value="0">JW_SIGP_XML_NORMAL</option>
+      <option value="1">JW_SIGP_XML_SINGLE_THUMBNAIL</option>
+    </param>
+    <param name="sortorder" type="list" default="0" label="JW_SIGP_XML_ORDERING" description="JW_SIGP_XML_ORDER_OF_APPEARANCE_FOR_THE_IMAGES_PREFER_THE_DEFAULT_OPTION_IF_OTHERS_DONT_WORK_AS_EXPECTED">
+      <option value="0">JW_SIGP_XML_DEFAULT</option>
+      <option value="1">JW_SIGP_XML_ALPHABETICAL_ORDER</option>
+      <option value="2">JW_SIGP_XML_ALPHABETICAL_ORDER_CASE_INSENSITIVE</option>
+      <option value="3">JW_SIGP_XML_REVERSE_DEFAULT_ORDER</option>
+      <option value="4">JW_SIGP_XML_RANDOM_ORDER</option>
+    </param>
+    <param name="showcaptions" type="list" default="1" label="JW_SIGP_XML_DEFAULT_CAPTION_LABEL_HANDLING" description="JW_SIGP_XML_PLEASE_NOTE_THAT_WHEN_YOU_SELECT_READ_CONTENTS_OF_CAPTION_FILES_THE_RELATED_LABEL_FILES_WILL_BE_AUTOMATICALLY_CREATED_FOR_YOU">
+    	<option value="0">JW_SIGP_XML_NO_CAPTIONS</option>
+      <option value="1">JW_SIGP_XML_SHOW_GENERIC_MESSAGES</option>
+      <option value="2">JW_SIGP_XML_READ_CONTENTS_OF_CAPTION_FILES</option>
+    </param>
+    <param name="wordlimit" type="text" default="" size="3" label="JW_SIGP_XML_CAPTION_WORD_LIMIT" description="JW_SIGP_XML_SET_CAPTION_WORD_LIMIT_TO_AVOID_HUGE_CAPTIONS_POTENTIALLY_HIDING_THUMBNAIL_IMAGES" />
+    <param name="enabledownload" type="radio" default="1" label="JW_SIGP_XML_ENABLE_ORIGINAL_IMAGE_DOWNLOAD_LINK_IN_THE_POPUP" description="">
+      <option value="0">JW_SIGP_XML_NO</option>
+      <option value="1">JW_SIGP_XML_YES</option>
+    </param>
+    <param name="loadmoduleposition" type="positions" default="" label="JW_SIGP_XML_LOAD_A_MODULE_POSITION_IN_THE_POPUP" description="JW_SIGP_XML_SELECT_A_MODULE_POSITION_TO_LOAD_IN_THE_POPUP_WINDOW" />
+    <param name="" type="header" default="JW_SIGP_XML_FLICKR_INT" label="" description="" />
+    <param name="flickrImageCount" type="text" default="20" size="3" label="JW_SIGP_XML_FLICKR_TOTALIMAGES" description="JW_SIGP_XML_FLICKR_TOTALIMAGES_DESC" />
+  </params>
+  <params group="advanced">
+  	<param name="cache_expire_time" type="text" default="120" size="3" label="JW_SIGP_XML_THUMBNAIL_CACHE_EXPIRATION_TIME" description="JW_SIGP_XML_THUMBNAIL_CACHE_EXPIRATION_TIME_IN_MINUTES_TO_INSTANTLY_REFRESH_THE_THUMBNAIL_CACHE_FOR_A_PARTICULAR_GALLERY_SIMPLY_SET_THIS_VALUE_TO_0_RELOAD_THE_GALLERY_PAGE_IN_JOOMLA_AND_RESET_IT_TO_120_NEVER_FORGET_THIS_VALUE_TO_0_OR_ELSE_THUMBNAILS_WILL_BE_CREATED_EVERY_TIME_A_GALLERY_IS_LOADED_THUS_OVERLOADING_THE_SERVERS_RESOURCES" />
+  	<param name="yqlMaxAge" type="text" default="60" size="3" label="JW_SIGP_XML_YQL_CACHE" description="" />
+  	<param name="memoryLimit" type="text" default="" size="3" label="JW_SIGP_XML_MEMORY_LIMIT_IN_MBS" description="JW_SIGP_XML_CHANGE_YOUR_SERVERS_MEMORY_LIMIT_IF_GALLERIES_FAIL_TO_CREATE_OR_YOU_GET_THE_WHITE_PAGE_ERROR_ON_YOUR_SITE_THIS_OPTION_MAY_NOT_WORK_IN_ALL_CASES" />
+  	<param name="debugMode" type="radio" default="1" label="JW_SIGP_XML_DEBUG_MODE" description="JW_SIGP_XML_ENABLE_THIS_OPTION_TO_DISPLAY_POSSIBLE_ERRORS_OR_OTHER_WARNINGS_USEFUL_FOR_DEBUGGING">
+      <option value="0">JW_SIGP_XML_DISABLED</option>
+      <option value="1">JW_SIGP_XML_ENABLED</option>
+    </param>
+  </params>
+	<config>
+		<fields name="params">
+		  <fieldset name="basic" addfieldpath="/plugins/content/jw_sigpro/jw_sigpro/includes/elements">
+		    <field name="galleries_rootfolder" type="text" default="images" label="JW_SIGP_XML_ROOT_FOLDER" description="JW_SIGP_XML_SELECT_THE_STARTING_FOLDER_FOR_ALL_YOUR_IMAGE_GALLERIES_THIS_IS_GENERALLY_PREFERRED_TO_BE_IMAGESSTORIES_SO_YOU_CAN_EASILY_USE_THE_JOOMLA_MEDIA_MANAGER_TO_UPLOAD_YOUR_IMAGES_INTO_SUBFOLDERS_WITHIN_THIS_FOLDER_EG_INSIDE_IMAGESSTORIESGALLERIESSOMEIMAGEGALLERY" />
+		    <field name="popup_engine" type="list" default="jquery_slimbox" label="JW_SIGP_XML_POPUP_ENGINE_FOR_IMAGE_GALLERIES" description="JW_SIGP_XML_DEPENDING_ON_WHAT_JAVASCRIPT_LIBRARYFRAMEWORK_YOU_USE_IN_YOUR_SITE_CHOOSE_AN_APPROPRIATE_POPUP_ENGINE_TO_ACHIEVE_MAXIMUM_COMPATIBILITY_AND_AVOID_ANY_JAVASCRIPT_CONFLICTS_POPUP_ENGINES_NOT_BASED_ON_JQUERY_OR_MOOTOOLS_WILL_GENERALLY_BE_NEUTRAL_ON_ALL_JOOMLA_WEBSITES">
+		      <option value="jquery_slimbox">JW_SIGP_XML_SLIMBOX2_POWERED_BY_JQUERY</option>
+		      <option value="jquery_prettyphoto">JW_SIGP_XML_PRETTYPHOTO_POWERED_BY_JQUERY</option>
+		      <option value="jquery_colorbox">JW_SIGP_XML_COLORBOX_POWERED_BY_JQUERY</option>
+		      <option value="jquery_fancybox">JW_SIGP_XML_FANCYBOX_POWERED_BY_JQUERY</option>
+		      <option value="highslide">JW_SIGP_XML_HIGHSLIDE_WITH_SLIDESHOW</option>
+		      <option value="lytebox">JW_SIGP_XML_LYTEBOX_WITH_SLIDESHOW</option>
+		      <option value="greybox">JW_SIGP_XML_GREYBOX</option>
+		      <option value="mootools_slimbox">JW_SIGP_XML_SLIMBOX_POWERED_BY_MOOTOOLS</option>
+		      <option value="simplebox">JW_SIGP_XML_SIMPLEBOX_BY_JOOMLAWORKS</option>
+		    </field>
+		    <field name="thb_template" type="folderlist" directory="/plugins/content/jw_sigpro/jw_sigpro/tmpl" default="Classic" hide_default="1" hide_none="1" label="JW_SIGP_XML_LAYOUT_TEMPLATE_FOR_IMAGE_GALLERIES" description="JW_SIGP_XML_CHOOSE_A_TEMPLATE_TO_DISPLAY_YOUR_IMAGE_GALLERIES" />
+		    <field name="thb_width" type="text" default="200" size="3" label="JW_SIGP_XML_THUMBNAIL_VIEWPORT_WIDTH" description="JW_SIGP_XML_ADJUST_THE_MAXIMUM_IMAGE_THUMBNAIL_WIDTH_IN_PIXELS" />
+		    <field name="thb_height" type="text" default="160" size="3" label="JW_SIGP_XML_THUMBNAIL_VIEWPORT_HEIGHT" description="JW_SIGP_XML_ADJUST_THE_MAXIMUM_IMAGE_THUMBNAIL_HEIGHT_IN_PIXELS" />
+		    <field name="smartResize" type="radio" default="1" label="JW_SIGP_XML_SMART_THUMBNAIL_RESIZE_BASED_ON_ABOVE_DIMENSIONS" description="JW_SIGP_XML_IF_SET_TO_DISABLED_IMAGE_THUMBNAILS_ARE_DISPLAYED_BASED_ON_THE_ASPECT_RATIO_OF_THE_ORIGINAL_IMAGE_IF_SET_TO_ENABLED_IMAGES_ARE_RESIZED_TO_FIT_THE_THUMBNAIL_VIEWPORT_AS_SET_ON_THE_DIMENSION_OPTIONS_ABOVE_THE_LAST_OPTION_IS_IDEAL_WHEN_YOU_WANT_TO_DISPLAY_IMAGES_OF_DIFFERENT_ASPECT_RATIO_IN_THUMBNAILS_OF_THE_SAME_DIMENSIONS">
+		      <option value="0">JW_SIGP_XML_DISABLED</option>
+		      <option value="1">JW_SIGP_XML_ENABLED</option>
+		    </field>
+		    <field name="jpg_quality" type="text" default="80" size="3" label="JW_SIGP_XML_THUMBNAIL_IMAGE_QUALITY" description="JW_SIGP_XML_ADJUST_THE_QUALITY_OF_THE_GENERATED_IMAGE_THUMBNAIL_VALUES_RANGE_FROM_0_TO_100_WITH_100_GIVING_THE_BEST_POSSIBLE_RESULT_VALUES_BETWEEN_70_TO_80_SHOULD_GENERALLY_BE_PREFERRED_REMEMBER_THAT_THE_LOWER_THIS_VALUE_IS_THE_SMALLER_THE_SIZE_OF_THE_GENERATED_THUMBNAIL_WILL_BE" />
+		    <field name="singlethumbmode" type="radio" default="0" label="JW_SIGP_XML_DISPLAY_MODE" description="JW_SIGP_XML_CHOOSE_SINGLE_THUMBNAIL_MODE_TO_LAUNCH_POPUP_SLIDESHOWS_FROM_THE_FIRST_THUMBNAIL_OF_YOUR_GALLERY_USE_THIS_OPTION_WHEN_YOU_WANT_TO_SAVE_SOME_SPACE_IN_YOUR_DOCUMENT_IF_YOU_SELECT_NORMAL_ALL_CORRESPONDING_THUMBNAILS_WILL_DISPLAY">
+		      <option value="0">JW_SIGP_XML_NORMAL</option>
+		      <option value="1">JW_SIGP_XML_SINGLE_THUMBNAIL</option>
+		    </field>
+		    <field name="sortorder" type="list" default="0" label="JW_SIGP_XML_ORDERING" description="JW_SIGP_XML_ORDER_OF_APPEARANCE_FOR_THE_IMAGES_PREFER_THE_DEFAULT_OPTION_IF_OTHERS_DONT_WORK_AS_EXPECTED">
+		      <option value="0">JW_SIGP_XML_DEFAULT</option>
+		      <option value="1">JW_SIGP_XML_ALPHABETICAL_ORDER</option>
+		      <option value="2">JW_SIGP_XML_ALPHABETICAL_ORDER_CASE_INSENSITIVE</option>
+		      <option value="3">JW_SIGP_XML_REVERSE_DEFAULT_ORDER</option>
+		      <option value="4">JW_SIGP_XML_RANDOM_ORDER</option>
+		    </field>
+		    <field name="showcaptions" type="list" default="1" label="JW_SIGP_XML_DEFAULT_CAPTION_LABEL_HANDLING" description="JW_SIGP_XML_PLEASE_NOTE_THAT_WHEN_YOU_SELECT_READ_CONTENTS_OF_CAPTION_FILES_THE_RELATED_LABEL_FILES_WILL_BE_AUTOMATICALLY_CREATED_FOR_YOU">
+		    	<option value="0">JW_SIGP_XML_NO_CAPTIONS</option>
+		      <option value="1">JW_SIGP_XML_SHOW_GENERIC_MESSAGES</option>
+		      <option value="2">JW_SIGP_XML_READ_CONTENTS_OF_CAPTION_FILES</option>
+		    </field>
+		    <field name="wordlimit" type="text" default="" size="3" label="JW_SIGP_XML_CAPTION_WORD_LIMIT" description="JW_SIGP_XML_SET_CAPTION_WORD_LIMIT_TO_AVOID_HUGE_CAPTIONS_POTENTIALLY_HIDING_THUMBNAIL_IMAGES" />
+		    <field name="enabledownload" type="radio" default="1" label="JW_SIGP_XML_ENABLE_ORIGINAL_IMAGE_DOWNLOAD_LINK_IN_THE_POPUP" description="">
+		      <option value="0">JW_SIGP_XML_NO</option>
+		      <option value="1">JW_SIGP_XML_YES</option>
+		    </field>
+		    <field name="loadmoduleposition" type="positions" default="" label="JW_SIGP_XML_LOAD_A_MODULE_POSITION_IN_THE_POPUP" description="JW_SIGP_XML_SELECT_A_MODULE_POSITION_TO_LOAD_IN_THE_POPUP_WINDOW" />
+				<field name="" type="header" default="JW_SIGP_XML_FLICKR_INT" label="" description="" />
+    		<field name="flickrImageCount" type="text" default="20" size="3" label="JW_SIGP_XML_FLICKR_TOTALIMAGES" description="JW_SIGP_XML_FLICKR_TOTALIMAGES_DESC" />
+		  </fieldset>
+		  <fieldset name="advanced">
+		  	<field name="cache_expire_time" type="text" default="120" size="3" label="JW_SIGP_XML_THUMBNAIL_CACHE_EXPIRATION_TIME" description="JW_SIGP_XML_THUMBNAIL_CACHE_EXPIRATION_TIME_IN_MINUTES_TO_INSTANTLY_REFRESH_THE_THUMBNAIL_CACHE_FOR_A_PARTICULAR_GALLERY_SIMPLY_SET_THIS_VALUE_TO_0_RELOAD_THE_GALLERY_PAGE_IN_JOOMLA_AND_RESET_IT_TO_120_NEVER_FORGET_THIS_VALUE_TO_0_OR_ELSE_THUMBNAILS_WILL_BE_CREATED_EVERY_TIME_A_GALLERY_IS_LOADED_THUS_OVERLOADING_THE_SERVERS_RESOURCES" />
+		  	<field name="yqlMaxAge" type="text" default="60" size="3" label="JW_SIGP_XML_YQL_CACHE" description="" />
+		  	<field name="memoryLimit" type="text" default="" size="3" label="JW_SIGP_XML_MEMORY_LIMIT_IN_MBS" description="JW_SIGP_XML_CHANGE_YOUR_SERVERS_MEMORY_LIMIT_IF_GALLERIES_FAIL_TO_CREATE_OR_YOU_GET_THE_WHITE_PAGE_ERROR_ON_YOUR_SITE_THIS_OPTION_MAY_NOT_WORK_IN_ALL_CASES" />
+		  	<field name="debugMode" type="radio" default="1" label="JW_SIGP_XML_DEBUG_MODE" description="JW_SIGP_XML_ENABLE_THIS_OPTION_TO_DISPLAY_POSSIBLE_ERRORS_OR_OTHER_WARNINGS_USEFUL_FOR_DEBUGGING">
+		      <option value="0">JW_SIGP_XML_DISABLED</option>
+		      <option value="1">JW_SIGP_XML_ENABLED</option>
+		    </field>
+		  </fieldset>
+	  </fields>
+	</config>
+  <files>
+    <filename plugin="jw_sigpro">jw_sigpro.php</filename>
+    <folder>jw_sigpro</folder>
+  </files>
+  <media folder="media" destination="jw_sigpro">
+    <filename>SimpleImageGalleryPro_300x88_24.png</filename>
+  </media>
+  <languages>
+    <language tag="en-GB">en-GB.plg_content_jw_sigpro.ini</language>
+    <language tag="en-GB">en-GB.plg_content_jw_sigpro.sys.ini</language>
+    <language tag="ru-RU">ru-RU.plg_content_jw_sigpro.ini</language>
+    <language tag="ru-RU">ru-RU.plg_content_jw_sigpro.sys.ini</language>
+  </languages>
+</install>
